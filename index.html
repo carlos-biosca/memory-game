@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/styles.css" />
+    <title>Memory Game</title>
+  </head>
+  <body>
+    <main class="main">
+      <div class="info">
+        <p class="info__tries">Turns <span id="tries"></span></p>
+        <p class="info__points">Score <span id="points">000</span></p>
+        <p class="info__combo" id="combo"></p>
+      </div>
+      <div class="game-container" id="container"></div>
+    </main>
+    <div id="modal" class="modal modal--close">
+      <header class="header">
+        <h1>POKE MEMORY GAME</h1>
+      </header>
+      <form id="form" class="form">
+        <div class="form__field">
+          <label for="player" class="form__label">Player Name</label>
+          <input
+            type="text"
+            name="player"
+            class="form__input"
+            id="player"
+            maxlength="10"
+          />
+        </div>
+        <div class="form__field">
+          <label for="level" class="form__label">Select level</label>
+          <select name="level" id="level" class="form__select">
+            <option value="easy">Easy</option>
+            <option value="normal" selected>Normal</option>
+            <option value="hard">Hard</option>
+            <option value="ultimate" hidden>Ultimate</option>
+          </select>
+        </div>
+        <input type="submit" value="Start" class="form__submit" />
+      </form>
+    </div>
+    <div id="modal-win" class="modal-win">
+      <p class="modal-win__text"></p>
+      <div class="scoreboard" id="scoreboard"></div>
+      <a href="#" class="modal-win__start" id="restart">Play again</a>
+    </div>
+    <script src="js/scripts.js"></script>
+  </body>
+</html>
